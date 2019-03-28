@@ -32,7 +32,7 @@ def parseXML(xmlfile,ComponentItems):
 
 ComponentItems = {}
 for n in range(1,136901,100):
-    parseXML("//home//rahul//Downloads//EEE//bugs{0}-{1}.xml".format(n,n+99),ComponentItems )
+    parseXML("EEE//bugs{0}-{1}.xml".format(n,n+99),ComponentItems )
 with open('output2.txt',"w") as output:
     print(ComponentItems,file=output)
     print(ComponentItems)
