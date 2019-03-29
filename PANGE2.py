@@ -19,8 +19,9 @@ def Paring(dict_ComponentItems,N):
                         list_for_pd = [j, k]
                         random_dict_key=choice(temp_rest_dict_list)
                         list_for_pd.append(np.random.choice(dict_ComponentItems[random_dict_key], 1)[0])
+                        list_for_pd=[int(x) for x in list_for_pd]
                         print(list_for_pd)
-                        print("np.random.choice(dict_ComponentItems[random_dict_key], 1)[0]=",np.random.choice(dict_ComponentItems[random_dict_key], 1)[0])
+                        #print("np.random.choice(dict_ComponentItems[random_dict_key], 1)[0]=",np.random.choice(dict_ComponentItems[random_dict_key], 1)[0])
                         df = df.append(pd.Series(list_for_pd, index=['q', 'rel','irr']), ignore_index=True)
 
     df.to_csv('dataframe.csv', index=None, header=True)
